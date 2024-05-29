@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
+import React from "react"
+import { RouterProvider } from "react-router-dom"
+import router from "./router/router"
 
 const App = () => {
-  const [input, setinput] = useState("")
-  const onChange = (e) => setinput(e.target.value)
   return (
-    <>  
-      <input 
-        onChange={onChange}
-        placeholder="Input"
-        value={input}
-      />
-      {input}  
+    <>
+      <RouterProvider router={router} />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
